@@ -13,9 +13,12 @@ int rightSideOffset;
 int xOffset, yOffset;
 PVector[][] boxCoords;
 
+void settings(){
+  src = loadImage("Bess.jpg");
+  size(src.width*2,src.height);
+}
+
 void setup(){
-    size(900, 450);
-    src = loadImage("Dad.jpg");
     boxRows = 11;
     boxCols = 11;
     boxWidth = width/2/(boxRows*2+1);
@@ -30,6 +33,7 @@ void setup(){
 }
 
 void draw(){
+    background(0);
     image(src, 0, 0);
     drawRectangles();
     updateSampledImage();
@@ -66,18 +70,18 @@ void updateSampledImage(){
     }
 }
 
-void void keyPressed() {
+void keyPressed() {
     if (key == CODED) {
         if (keyCode == LEFT) {
-            xOffset -= 1
+            xOffset -= 1;
         } else if (keyCode == RIGHT) {
-            xOffset += 1
+            xOffset += 1;
         } else if (keyCode == UP) {
-            yOffset += 1
+            yOffset += 1;
         } else if (keyCode == DOWN){
-            yOffset -= 1
+            yOffset -= 1;
         }
     }
     // On any keyPress, update the image
-    updateSampledImage()
+    updateBoxCoords();
 }
