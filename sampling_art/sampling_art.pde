@@ -14,13 +14,13 @@ int xOffset, yOffset;
 PVector[][] boxCoords;
 
 void settings(){
-  src = loadImage("Bess.jpg");
+  src = loadImage("Susan and Bess.jpg");
   size(src.width*2,src.height);
 }
 
 void setup(){
-    boxRows = 11;
-    boxCols = 11;
+    boxRows = 30;
+    boxCols = 30;
     boxWidth = width/2/(boxRows*2+1);
     boxCoords = new PVector[boxRows][boxCols];
     rightSideOffset = width/2;
@@ -77,9 +77,9 @@ void keyPressed() {
         } else if (keyCode == RIGHT) {
             xOffset += 1;
         } else if (keyCode == UP) {
-            yOffset += 1;
-        } else if (keyCode == DOWN){
             yOffset -= 1;
+        } else if (keyCode == DOWN){
+            yOffset += 1;
         }
     }
     // On any keyPress, update the image
