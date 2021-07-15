@@ -5,6 +5,11 @@
 3. update boxes on the screen for the sampling points
 4. Grab those pixels and recompose on the right side
 */
+// TODO: Fix the position of the final image
+//       Add Sliders for number of squares
+//       Add Sliders for the gap between the squares
+//       Add Sliders for the size of the squares --> change to CENTRE mode
+
 
 PImage src;
 
