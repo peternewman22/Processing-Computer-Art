@@ -1,13 +1,13 @@
-class airport{
+class Airport{
     PVector pos;
     float s = 10;
 
-    airport(float x, float y){
-        pos = new PVector(x,y);
+    Airport(PVector pos_){
+        pos = pos_.copy();
     }
 
-    show(){
-        fill(255,0,255);
+    void show(){
+        fill(255,255,0);
         ellipse(pos.x, pos.y, s, s);
     }
 }
